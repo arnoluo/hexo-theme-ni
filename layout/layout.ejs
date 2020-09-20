@@ -23,12 +23,13 @@ if (pageTitle == '') {
   <script src="<%= theme.base_file.js%>jquery.jside.menu.js"></script>
 	<script>
 	$(document).ready(function(){
-	$(".menu-container").jSideMenu({
+	  $(".menu-container").jSideMenu({
 	    jSidePosition: "position-right",
 	    jSideSticky: true,
 	    jSideSkin: "<%- theme.menu_theme%>",
-	     });
-	}); 
+	  });
+	});
+  <%if (!theme.debug) {%> console.log = function() {};<%}%>
 	</script>
   <%-partial('third-party/analytics/index')%>
   <link rel="stylesheet" href="<%= theme.base_file.font%>">

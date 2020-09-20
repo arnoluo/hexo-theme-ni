@@ -25,6 +25,8 @@ next_post: /images/footer_2.jpg #下一篇文章
 ## 不填则为默认初始状态(灰黑色black-grey)
 menu_theme: 
 
+debug: false
+
 # 页面
 menu:
   enable: false
