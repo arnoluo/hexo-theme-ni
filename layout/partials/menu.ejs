@@ -1,0 +1,39 @@
+<div class="menu">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="<%= theme.avatar%>" alt="<%- config.author%>"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p><%- config.author%></p>
+          <span class="tagline"><%- theme.personal_des%></span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/" class="index-link"><i class="fa fa-home fa-fw"></i>首页</a></li>
+    <li class="has-sub"><span class="dropdown-heading"><i class="fa fa-archive fa-fw"></i>归档</span>
+      <div><%- list_archives({format: 'YYYY-MM', style: 'none', separator: ''}).replace(/span/g, 'sup') %></div>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading"><i class="fa fa-bars fa-fw"></i>分类</span>
+      <div><%- list_categories({style: 'none', separator: ''}).replace(/span/g, 'sup') %></div>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading"><i class="fa fa-tags fa-fw"></i>标签</span>
+      <div><%- list_tags({style: 'none', separator: ''}).replace(/span/g, 'sup') %></div>
+    </li>
+    <li><a href="/guestbook" class="index-link"><i class="fa fa-comments fa-fw"></i>留言</a></li>
+    <li><a href="/about" class="index-link"><i class="fa fa-address-card fa-fw"></i>关于</a></li>
+    <%if (theme.friends.enable) {%><li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-link fa-fw"></i>友链</span>
+        <div>
+          <% for (var j in theme.friends.links){ %><a href="<%= url_for(theme.friends.links[j]) %>" target="_blank"><%= j %></a>
+        <% } %></div>
+    </li><%}%>
+  </ul>
+  </nav>
+</div>
