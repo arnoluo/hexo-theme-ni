@@ -13,11 +13,11 @@ personal_des: Hi there
 cover: /images/cover.jpg
 
 # 文章封面
-postcover: /images/page-cover.jpg
+postcover: /images/page_cover.jpg
 
 # 文末图片
-prev_post: /images/footer_1.jpg #上一篇文章
-next_post: /images/footer_2.jpg #下一篇文章
+prev_post: /images/footer_prev.jpg #上一篇文章
+next_post: /images/footer_next.jpg #下一篇文章
 
 # 侧边栏主题
 ##纯色可选：green,red,blue,bnp(bright neon pink),orange,black,pink,gol-b(golden brown),greenish(greenish blue)
