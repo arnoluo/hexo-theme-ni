@@ -111,12 +111,19 @@ h2.archive, h2.tag, h2.category {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-color: black;
 }
 .single #lx-aside {
   position: relative;
   height: 450px;
   min-width: 100%;
+  background-size: 100% 450px;
 }
+
+#lx-aside.infinite {
+  background-position: 0 0 !important;
+}
+
 #lx-aside a {
   color: rgba(255, 255, 255, 0.5);
 }
@@ -167,7 +174,7 @@ h2.archive, h2.tag, h2.category {
 .single #lx-aside .page-title h2 {
   font-size: 52px;
 }
-@media (max-width: 768px){
+@media screen and  (max-width: 768px){
   .single #lx-aside .page-title h2 {
     font-size: 40px;
   }
@@ -228,7 +235,7 @@ h2.archive, h2.tag, h2.category {
   width: 700px;
   z-index: 9999;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .local-search-popup {
     border-radius: 0;
     height: 100%;
@@ -375,7 +382,7 @@ a.category-link {
   font-size: 14px;
 }
 .padding {
-  padding: 20px 60px 30px 60px;
+  padding: 20px 80px 30px 80px;
 }
 @media screen and (max-width: 768px) {
   .padding {

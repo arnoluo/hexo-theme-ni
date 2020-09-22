@@ -21,14 +21,25 @@ if (pageTitle == '') {
   <link rel="stylesheet" href="<%= theme.base_file.css%>main.css">
   <script src="<%= theme.base_file.js%>jquery.min.js"></script>
   <script src="<%= theme.base_file.js%>jquery.jside.menu.js"></script>
+  <script src="<%= theme.base_file.js%>helper.js"></script>
 	<script>
+  var conf = {
+    maxWidth: "<%= theme.postcover_max_width%>",
+    maxExtWidth: "<%= theme.postcover_ext_max_width%>",
+    imgUrl: "<%= theme.postcover%>",
+    extImgUrl: "<%= theme.postcover_ext%>"
+  };
 	$(document).ready(function(){
 	  $(".menu-container").jSideMenu({
 	    jSidePosition: "position-right",
 	    jSideSticky: true,
 	    jSideSkin: "<%- theme.menu_theme%>",
 	  });
+    adjustPageCover(conf);
 	});
+  $(window).resize(function (){
+    adjustPageCover(conf);
+  });
   <%if (!theme.debug) {%> console.log = function() {};<%}%>
 	</script>
   <%-partial('third-party/analytics/index')%>
@@ -49,5 +60,6 @@ if (pageTitle == '') {
 <script src="<%= theme.base_file.js%>main.js"></script>
 <% if (theme.local_search.enable) {%><script src="<%= theme.base_file.js%>local.search.js"></script><%}%>
 <%if (theme.comment.enable) {%><%- partial('third-party/comment')%><%}%>
-<%if (theme.mathjax.enable) {%><%if (page.mathjax) {%><%- partial('third-party/mathjax')%><%}%><%}%></body>
+<%if (theme.mathjax.enable) {%><%if (page.mathjax) {%><%- partial('third-party/mathjax')%><%}%><%}%>
+</body>
 </html>

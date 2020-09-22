@@ -12,8 +12,14 @@ personal_des: Hi there
 # 首页封面
 cover: /images/cover.jpg
 
-# 文章封面
+# 文章封面(普通)
 postcover: /images/page_cover.jpg
+# 文章封面(普通) 适应宽度最大值(px)
+postcover_max_width: 1000
+# 文章封面(大屏幕, >=postcover_max_width)
+postcover_ext: /images/page_cover_ext.jpg
+# 文章封面(大屏幕) 适应宽度最大值(px), 超出此值不再自适应宽度，而是填充背景色
+postcover_ext_max_width: 1800
 
 # 文末图片
 prev_post: /images/footer_prev.jpg #上一篇文章
@@ -23,7 +29,7 @@ next_post: /images/footer_next.jpg #下一篇文章
 ##纯色可选：green,red,blue,bnp(bright neon pink),orange,black,pink,gol-b(golden brown),greenish(greenish blue)
 ##渐变色可选：endless-river,crazy-orange,between-clouds,amethyst,steel-man,d2f(dance to forget),park-life,moonlit,fb-messenger,flickr
 ## 不填则为默认初始状态(灰黑色black-grey)
-menu_theme: 
+menu_theme: black-grey
 
 debug: false
 

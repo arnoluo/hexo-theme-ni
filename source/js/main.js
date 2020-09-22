@@ -103,13 +103,11 @@
 		if ( !isMobile.any() ) {
 			$(window).stellar({
 				horizontalScrolling: false,
-				hideDistantElements: false, 
-				responsive: true,
+				hideDistantElements: false,
 				verticalOffset: 45
 			});
 		}
 	};
-
 
 	$(function(){
 		contentWayPoint();
@@ -117,6 +115,4 @@
 		loaderPage();
 		parallax();
 	});
-
-
 }());
